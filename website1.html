@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name="description" content="Nicholas Lago Portfolio">
+    <meta name="author" content="Nicholas Lago">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    
+    <title>Nicholas Lago Portfolio</title>
+    <script defer src="app.js"></script>
+    <style>
+
+        .reveal {
+			position: relative;
+			transform: translateY(150px);
+			opacity: 0%;
+			transition: 1s;
+		}
+		.reveal.active {
+			transform: translateY(0px);
+			opacity: 100%;
+		}
+
+        .light {
+            color: transparent;
+            transition: .5s;
+            filter: brightness(40%);
+		}
+		.light.active {
+            color: rgb(61, 61, 61);
+			filter: brightness(100%);
+		}
+        
+
+        .popup {
+            font-family: sf pro;            
+            padding-right: 45px;
+            margin-top: -15px;
+            margin-bottom: 12px;
+            animation-name: imagefade;
+            animation-duration: 3.5s;
+        }
+        
+        
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        
+
+        .topbox {
+        
+        font-size:100px;
+        word-spacing:10px;
+        font-weight:500;
+        background-color:rgb(255, 244, 230, 0);
+        left: 10px;
+        margin-bottom: 85px;
+        padding: -200px;
+        font-family:  made tommy;
+        color: rgb(61, 61, 61);
+        text-align: center;
+        position: relative;
+        animation-duration: 4s;
+        animation-name: name;
+        animation-timing-function: ease;
+        z-index: 1;
+        text-shadow: 0px 2px 6px rgb(0, 0, 0, .4);
+        }
+
+        @media screen and (max-width: 900px) {
+            .topbox {
+                font-size: 85px;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            .topbox {
+                font-size: 65px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .topbox {
+                font-size: 50px;
+                margin-bottom: 50px;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            .topbox {
+                font-size: 40px;
+                margin-bottom: 50px;
+            }
+        }
+
+        .linkline {
+        background-color:rgb(255, 244, 230, 0);
+        font-family:SF Pro;
+        color: rgb(61, 61, 61);
+        font-size: 29px;
+        font-weight: 350;
+        text-align: center;
+        padding-bottom: 0px;
+        margin-top: -40px;
+        border: solid none;
+        word-spacing: 160px;
+        text-decoration: none;
+        animation-name: linkline;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        z-index: 0;
+        }
+
+        @media screen and (max-width: 900px) {
+            .linkline {
+                word-spacing: 70px;
+            }
+        }
+
+
+        .firstLink {
+            transition: .6s;
+            border-radius: 10px;
+        }
+        .fourthLink {
+            transition: .4s;
+            animation-name: menuline;
+            animation-duration: 3.5s;
+            text-shadow: none;
+            color: rgb(64, 49, 39);
+            font-size: 20px;
+            
+        }
+
+        .iconlinks {
+            transition: .4s;
+            border-radius: 100px;
+            width: 80px;
+            margin-top: -20px;
+           
+            box-shadow: 0px 1px 5px 1px rgb(0,0,0,.3);
+        }
+
+        .iconlinks:hover {
+            box-shadow: 0px 1px 7px 3px rgb(0,0,0,.3);
+            
+            
+        }
+
+        @media screen and (max-width: 900px) {
+            .iconlinks {
+                width: 80px;
+            }
+        }
+        @media screen and (max-width: 700px) {
+            .iconlinks {
+                margin-top: 20px;
+                width: 55px;
+            }
+        }
+        
+        @media screen and (max-width: 400px) {
+            .iconlinks {
+                width: 40px;
+            }
+        }
+
+        .downarrow {
+            transition: .5s;
+            border: none;
+            border-radius: 100px;
+            margin-top: 35px;
+            box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.0);
+            width: 60px;
+            animation-name: imagefade;
+            animation-duration: 3.5s;
+            -webkit-filter: drop-shadow(0px 0px 0px black);
+            filter: drop-shadow(0px 1px 3px rgb(0, 0, 0, 0.5));
+        }
+        .downarrow:hover {
+            -webkit-filter: drop-shadow(0px 5px 5px black);
+            filter: drop-shadow(0px 1.5px 4.5px rgb(0, 0, 0, 0.5));
+        
+            
+            
+        }
+        
+        a.secondLink:link{
+            color: rgb(64, 49, 39);
+            text-decoration-line: underline;
+            font-weight: 600;
+            animation-name: imagefade;
+            animation-duration: 3.5s;
+        }
+        a.secondLink:hover{
+            color:rgb(64, 49, 39);
+            background-color: rgb(64, 49, 39,.0);
+            text-decoration: underline;
+        }
+        a.secondLink:visited{
+            color: rgb(64, 49, 39);
+            text-decoration-line: underline;
+            font-weight: 600;
+        }
+        a.secondLink:active{
+            color:rgb(64, 49, 39);
+            padding: 0px;
+            text-decoration:none;
+        }
+        a.thirdLink:link{
+            color: rgb(255, 244, 230);
+            text-decoration-line: underline;
+        }
+        a.thirdLink:hover{
+            color:rgb(255, 244, 230);;
+            text-decoration: underline;
+        }
+        a.thirdLink:visited{
+            color: rgb(255, 244, 230);
+            text-decoration-line: none;
+        }
+        a.thirdLink:active{
+            color:rgb(255, 244, 230);
+            text-decoration:none;
+        }
+        a.fourthLink:link{
+            color: rgb(61, 61, 61);
+            text-decoration: none;
+        }
+        a.fourthLink:visited{
+            color: rgb(61, 61, 61);
+            text-decoration: none;
+        }
+        a.fourthLink:hover{
+            color:rgb(134, 134, 134);
+            text-decoration: none; 
+            letter-spacing: .7px;
+            text-shadow: 0px 2px 13px rgb(255, 255, 255,0.7);
+        }
+        
+        a.fourthLink:active{
+            color: rgb(202, 202, 202);
+            text-decoration: none;
+        }
+        .summary{
+            
+            transition: .4s;
+            background-color: white;
+            border-left: solid rgb(61, 61, 61) 17px;
+            text-align: left;
+            font-family: sf Pro;
+            font-size: 22px;
+            margin-right: 100px;
+            margin-left: 100px;
+            padding-right: 70px;
+            padding-left: 70px;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            color: rgb(61, 61, 61);
+            line-height: 32px;
+            animation-name: summary;
+            animation-duration: 3.5s;
+            animation-timing-function: ease;
+            box-shadow: 5px 4px 4px 0px rgb(0,0,0,.3);
+        }
+
+        .summary:hover {
+            box-shadow: 6px 7px 6px 1px rgba(0, 0, 0, 0.4);
+        }
+
+        
+
+        @media screen and (max-width: 1100px) {
+            .summary {
+                padding-right: 30px;
+                padding-left: 30px;
+                margin-right: 50px;
+                margin-left: 50px;
+                font-size: 16px;
+            }
+        }
+        @media screen and (max-width: 630px) {
+            .summary {
+                margin-right: 20px;
+                margin-left: 20px;
+                font-size: 16px;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            .summary {
+                font-size: 13px;
+            }
+        }
+
+        header {
+            box-shadow: 0px 4px 10px 4px rgb(0, 0, 0,.4);
+            background-color: rgb(255, 255, 255);
+            word-spacing:180px;
+            margin-top: -10px;
+            margin-right: -7px;
+            margin-left: -10px;
+            color: rgb(64, 49, 39);
+            padding-bottom: 10px;
+            padding-top: 10px;
+            text-align: center;
+            margin-bottom: 0px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            font-family: SF PRO;
+        }
+
+        @media screen and (max-width: 700px) {
+            header {
+                word-spacing: 70px;
+            }
+        }
+
+        footer {
+            background-color: rgb(61, 61, 61);
+            font-family: Butler;
+            color: white;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: -20px;
+        }
+        
+
+        #spin {
+            transition: .5s;
+            display: inline-block;
+            position: relative;
+            transform-origin: center;
+        }
+
+        #spin:hover {
+            color: white;
+            transform: rotate(360deg);
+        }
+
+        .images {
+            animation-name: imagefade;
+            animation-duration: 3.5s;
+        }
+
+        #firstline {
+            animation-name: projectline;
+            animation-duration: 3s;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-bottom: 35px;
+            border-top: solid rgb(61, 61, 61);
+            border-width: 3px;
+        }
+
+        #projects {
+            scroll-margin-top: 20px;
+            animation-name: projectline;
+            animation-duration: 3s;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-bottom: 35px;
+            border-top: solid rgb(61, 61, 61);
+            border-width: 3px;
+        }
+
+        .projectstitle {
+            
+            font-family: made tommy;
+            animation-name: imagefade;
+            animation-duration: 3.5s;
+            background-color: transparent;
+            color: rgb(61, 61, 61);
+            margin-left: 100px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            .projectstitle {
+             
+                margin-left: 20px;
+            }
+        }
+
+        #project {
+            
+            font-family: made tommy;
+            animation-name: imagefade;
+            animation-duration: 3.5s;
+            background-color: transparent;
+            color: rgb(61, 61, 61);
+        }
+
+        @media screen and (max-width: 730px) {
+            #project {
+                margin-right: 300px;
+                margin-left: 0px;
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            #project {
+                margin-right: 70px;
+            }
+        }
+
+        @media screen and (max-width: 420px) {
+            #project {
+                margin-right: 0px;
+            }
+        }
+
+        .projectdescription {
+            text-align: left;
+            font-family: sf Pro;
+            margin-top: 0px;
+            font-size: 17px;
+            font-weight: 340;
+            line-height: 28px;
+            margin-left: 30px;
+            animation-name: description;
+            animation-duration: 3.5s;
+            margin-right: 60px;
+            margin-bottom: 120px;
+        }
+
+        @media screen and (max-width: 730px) {
+            .projectdescription {
+                margin-bottom: 20px;
+                margin-right: 80px;
+                margin-left: 45px;
+            }
+        }
+        @media screen and (max-width: 320px) {
+            .projectdescription {
+                margin-bottom: 50px;
+                margin-right: 80px;
+                margin-left: 45px;
+            }
+        }
+
+        .projectbio {
+            text-align: left;
+            font-family: sf Pro;
+            margin-top: -20px;
+            font-size: 17px;
+            font-weight: 340;
+            line-height: 28px;
+            margin-left: 30px;
+            margin-right: 60%;
+            animation-name: description;
+            animation-duration: 3.5s;
+        }
+
+        @media screen and (max-width: 900px) {
+            .projectbio {
+                margin-right: 65px;
+                
+            }
+        }
+
+        @media screen and (max-width: 730px) {
+            .projectbio {
+                margin-left: 45px;
+                
+            }
+        }
+        
+        .cursor {
+            font-size: 90%;
+            top: -8px;
+            animation-name: cursor; 
+            animation-duration: 1.5s; 
+            animation-iteration-count: infinite;
+            animation-delay: 3s; 
+            position: relative;
+            opacity: 0%;
+            margin-left: -30px
+        }
+
+        @media screen and (max-width: 700px) {
+            .cursor {
+                margin-left: -15px;
+                top: -4px;
+                
+            }
+        }
+        
+
+        
+        
+
+        .about {
+            border-radius: 0px;
+            transition: .3s;
+            font-family: sf pro;
+            box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.0);
+            border: solid rgb(190, 190, 190) 0px;
+            border-collapse: collapse;
+            background-color: rgb(255, 255, 255);
+            width: 600px;
+            min-height: 500px;
+            color: rgb(61, 61, 61);
+            vertical-align: bottom;
+            font-family: sf Pro;
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+            top: 57px;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: 18px;
+            box-shadow: 5px 4px 4px 0px rgb(0,0,0,.3);
+            animation-name: imagefade;
+            animation-duration: 3.5s;
+        }
+
+        @media screen and (max-width: 1255px) {
+            .about {
+                width: 400px;
+              
+            }
+        }
+        
+        @media screen and (max-width: 838px) {
+            .about {
+                width: 85%;
+                min-height: 350px;
+                margin-right: 0px;
+            }
+        }
+
+
+        .about:hover {
+            box-shadow: 6px 7px 10px 3px rgba(0, 0, 0, 0.4);
+            
+            
+        }
+
+        
+        .abouttext {
+            text-align: left;
+            margin-left: 15px;
+            font-weight: 40;
+            padding: 30px;
+            line-height: 60px;
+            font-size: 24px;
+        }
+
+        @media screen and (max-width: 1255px) {
+            .abouttext {
+                font-size: 20px;
+              
+            }
+        }
+
+        @media screen and (max-width: 838px) {
+            .abouttext {
+                font-size: 17px;
+                margin-right: 60px;
+                line-height: 30px;
+            }
+        }
+
+        .abouttitle {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 50px;
+            font-family: made tommy;
+        }
+
+        @media screen and (max-width: 838px) {
+            .abouttitle {
+                margin-top: 0px;
+                margin-bottom: 10px;
+                font-size: 25px;
+                line-height: 40px;
+            }
+        }
+
+        .skills {
+            
+            border-radius: 0px;
+            transition: .3s;
+            box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.0);
+            border: solid rgb(190, 190, 190) 0px;
+            border-collapse: collapse;
+            background-color: rgb(255, 255, 255);
+            width: 600px;
+            min-height: 500px;
+            display: inline-block;
+            color: rgb(61, 61, 61);
+            vertical-align: bottom;
+            font-family: sf Pro;
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+            top: 57px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            box-shadow: 5px 4px 4px 0px rgb(0,0,0,.3);
+            animation-name: imagefade;
+            animation-duration: 3.5s;
+        }
+
+        .skills:hover {
+            box-shadow: 6px 7px 10px 3px rgba(0, 0, 0, 0.4);
+        
+        }
+
+        @media screen and (max-width: 1255px) {
+            .skills {
+                width: 400px;
+            }
+        }
+
+        @media screen and (max-width: 838px) {
+            .skills {
+                width: 85%;
+                min-height: 350px;
+            }
+        }
+        
+        .skillstext {
+            text-align: left;
+            margin-left: 25px;
+            margin-top: 0px;
+            padding: 30px;
+            font-size: 24px;
+            font-weight: 40;
+            line-height: 45px;
+        }
+
+        @media screen and (max-width: 1255px) {
+            .skillstext {
+                font-size: 20px;
+                line-height: 40px;
+            }
+        }
+
+        @media screen and (max-width: 838px) {
+            .skillstext {
+                font-size: 17px;
+                margin-right: 60px;
+                line-height: 30px;
+            }
+        }
+
+        
+
+        .magic {
+            margin-bottom: 0px;
+            animation: background-pan 8s linear infinite;
+            background: linear-gradient(
+            to right,
+            rgb(61, 61, 61),
+            rgb(61, 61, 61),
+            rgb(61, 61, 61),
+            rgb(61, 61, 61),
+            rgb(61, 61, 61),
+            rgb(61, 61, 61),
+            rgb(61, 61, 61),
+            rgb(61, 61, 61),
+            rgb(188, 188, 188),
+            rgb(61, 61, 61),
+            rgb(61, 61, 61),
+            rgb(61, 61, 61),
+            rgb(61, 61, 61),
+            rgb(61, 61, 61),
+            rgb(61, 61, 61),
+            rgb(61, 61, 61),
+            rgb(61, 61, 61)
+            
+            
+            );
+            background-size: 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            white-space: nowrap;
+
+        }
+
+        @keyframes background-pan {
+            0% {
+                background-position: 0% center;
+            }
+
+            100% {
+                background-position: -200% center;
+                
+            }
+            
+            
+
+            
+
+        }
+        
+        
+        
+        
+        @keyframes name {
+            0%   {color:rgb(61, 61, 61);  top:20px;letter-spacing: 10px; text-shadow: 0px 2px 4px rgb(0, 0, 0,.45);}
+            100% {color:rgb(61, 61, 61);  top:0px;text-shadow: 0px 2px 4px rgb(0, 0, 0,.45);}
+        }
+        @keyframes linkline {
+            
+            0% {opacity: 0%; margin-top: -100px;}
+            70% {opacity: 0%; margin-top: -100px;}
+            71% {opacity: 100%;}
+            100% {color: rgb(61, 61, 61);}
+        }
+        @keyframes menuline {
+            0% {color: rgb(64, 49, 39, .0); text-shadow: none;}
+            60% {color:rgb(64, 49, 39,.0); text-shadow: none;}
+            65% {text-shadow: none;}
+            80% {text-shadow: 0px 2px 13px rgb(255, 255, 255,0.5);}
+            100% {color: rgb(61, 61, 61); text-shadow: none}
+            
+        }
+        @keyframes summary {
+            0% {color: rgb(64, 49, 39, .0)}
+            0% {margin-left: 49%;margin-right: 49%;}
+            60% {margin-right: 100px;margin-left:100px}
+            60% {color:rgb(64, 49, 39,.0)}
+            100% {color:rgb(61, 61, 61)}
+            0% {border-top: solid rgb(64, 61, 61,0.0)}
+            10% {border-top: solid rgb(64, 61, 61,0.0)}
+            60% {border-top: solid rgb(61, 61, 61,1)}
+            0% {border-color:transparent}
+            60% {border-left-color:transparent}
+            100% {border-left-color: rgb(61, 61, 61)}
+            
+            0% {box-shadow: 0px 0px 0px 0px rgb(0, 0, 0,.0);}
+            70%  {box-shadow: 5px 4px 4px 0px rgb(0,0,0,.0);}
+            100% {box-shadow: 5px 4px 4px 0px rgb(0,0,0,.3);}
+            0% {background-color: transparent;}
+            63% {background-color: transparent;}
+            100% {background-color: white;}
+        }
+
+        @keyframes projectline {
+            0% {color: rgb(64, 49, 39, .0)}
+            0% {margin-left: 49%;margin-right: 49%;}
+            100% {margin-right: 30px;margin-left:30px}
+            0% {border-top: solid rgb(64, 49, 39,0.0)}
+            100% {border-top: solid rgb(61, 61, 61,1)}
+        }
+
+        @keyframes description {
+            0% {color: rgb(64, 49, 39, .0)}
+            60% {color:rgb(64, 49, 39,.0)}
+            100% {color:rgb(64, 49, 39)}
+        }
+
+        @keyframes cursor {
+            70% {opacity: 100%;}  
+        }
+        
+        @keyframes imagefade {
+            0% {opacity: 0%;}
+            60% {opacity: 0%;}
+            100% {opacity: 100%}
+        }
+       
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+label {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: inline-block;
+    width: 250px;
+    height: 300px;
+    position: relative;
+    margin-left: 39%;
+    margin-right: -35%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    margin-top: 150px;
+    margin-bottom: -150px;
+    
+}
+
+
+
+#label1 {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: inline-block;
+    width: 320px;
+    height: 360px;
+    position:relative;
+    margin-left: 35%;
+    margin-right: -29%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    margin-top: 250px;
+    animation-name: imagefade;
+    animation-duration: 3.5s;
+}
+
+@media screen and (max-width: 1100px) {
+    #label1 {
+        margin-left: 49%;
+        margin-top: 350px;
+    }
+}
+
+#label2 {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: inline-block;
+    width: 320px;
+    height: 360px;
+    margin-left: 35%;
+    margin-top: 160px;
+    position: relative;
+    margin-right: -130px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    animation-name: imagefade;
+    animation-duration: 3.5s;
+}
+
+@media screen and (max-width: 1100px) {
+    #label2 {
+        margin-left: 49%;
+    }
+}
+
+
+.gif {
+    transition: .5s;
+    box-shadow: 0px 4px 10px 3px rgb(0, 0, 0,.3);
+    animation: imagefade;
+    animation-duration: 3.5s;
+}
+
+.gif:hover {
+    filter: brightness(100%);
+}
+
+.webframe {
+    transition: .5s;
+    box-shadow: 0px 4px 10px 3px rgb(0, 0, 0,.3);
+    animation: imagefade;
+    animation-duration: 3.5s;
+    margin-right: 250px;
+    overflow: scroll;
+    
+}
+
+.webframe {
+    filter: brightness(100%);
+}
+
+
+
+
+#about {
+    scroll-margin-top: 140px;
+}
+
+
+
+@media screen and (max-width: 730px) {
+    .gif {
+        width: 280px;
+        margin-right: 100px;
+        margin-left: 45px;
+    }
+}
+@media screen and (max-width: 730px) {
+    .webframe {
+        width: 280px;
+        margin-right: 100px;
+        margin-left: 45px;
+    }
+}
+
+
+
+@media screen and (max-width: 350px) {
+    body, head {
+        zoom: 30%;
+        
+        
+
+    }
+    
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+.scroller::-webkit-scrollbar {
+    width: 7px;
+}
+
+.scroller::-webkit-scrollbar-thumb{
+    background-color: rgba(109, 87, 87, 0);
+    border: solid 1px white;
+    box-shadow: inset 0px 0px 5px 3px white;
+    width: 1px;
+    
+  
+}
+
+.scroller::-webkit-scrollbar-track {
+    background-color: rgba(255, 0, 0, 0);
+    width: 10px;
+    
+}
+
+.scroller {
+    padding-left: 100px;
+    margin-left: 0px;
+    padding-right: 200px;
+    display: grid;
+    gap: var(--size-3);
+    grid-auto-flow: column;
+    grid-auto-columns: 54%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+
+.element > img, .webframe {
+    margin: 0px;
+    inline-size: 93%;
+    aspect-ratio: 13/10;
+}
+
+@media screen and (max-width: 1170px) {
+    .scroller {
+        padding-left:20px;
+        grid-auto-columns: 70%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .scroller {
+        padding-left:10px;
+        padding-right: 100px;
+
+        grid-auto-columns: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .scroller {
+        padding-right: 50px;
+
+        padding-left:10px;
+        grid-auto-columns: 90%;
+    }
+}
+        
+    </style>
+    
+</head>
+
+<body style="background-color: rgb(244, 230, 214);">
+    <div>
+
+    
+    <header>
+        <div>
+        <a class="fourthLink"href="website1.html" title="Home Page" target="_self">Home</a>
+        <a class="fourthLink"href="#about"style="display:inline">About</a>
+        <a class="fourthLink"href="#projects"style="display:inline">Projects</a>
+        
+        
+        </div>
+    </header>
+    <div class="topbox" >
+    <p class="magic" style="display: inline-block;">
+       Nicholas Lago</p><span class="cursor">&#9474;
+    </span>
+ 
+    </div>
+      <h4 class="linkline"> 
+        
+        
+        <a href="https://linkedin.com/in/nicholaslago" title="Visit my LinkedIn page" target="_blank"><img class="iconlinks" src="You_Doodle_2022-10-25T19_58_34Z.PNG" ></a>
+                           
+        <a href="Resume 2022.pdf" title="View my resume" target="_blank"><img class="iconlinks" src="You_Doodle_2022-10-25T20_52_32Z.PNG" ></a>
+                            
+        <a href="mailto:nicklago7@yahoo.com" title="Contact me via email" target="_blank"><img class="iconlinks" src="You_Doodle_2022-10-25T20_04_27Z.PNG"></a></h4>
+
+    <p class="summary" style="font-weight:360; text-align: left;">
+        Dedicated student with a strong knowledge of computer science and experience teaching a college course. Passion for
+        building a deeper understanding of software development. Eager to implement my skills and collaborate with others to succeed. 
+    </p>
+    <div style="text-align: center">
+        <a href="#about"><img class="downarrow"src="down.PNG"></a>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    
+    <br>
+    <p id="firstline"></p>
+
+            <div style="text-align: center">
+                <div class="about"id="about">
+                    <div class="abouttext reveal">
+                        <p class="abouttitle">Education</p>
+                        20 year old student attending the University of Delaware.
+                        Pursuing a Bachelor of Science in Computer Science. 
+                        Concentration in robotics and AI.
+                        Expected in May 2025.
+                        
+                    </div>
+                    <img src="UDMonogramC.jpg"style="width:12%; position: absolute; right: 17px; bottom: 17px; border: solid rgb(61,61,61) 4px; border-radius: 60px; padding: 3px;">
+                </div>
+            
+                <div class="skills">
+                    <div class="skillstext reveal">
+                        <p class="abouttitle">Skills</p>
+                        
+                        &#9702;  Python 
+                        <br>
+                        &#9702; Java
+                        <br>
+                        &#9702; C/C++ 
+                        <br>
+                        
+                        &#9702; HTML/CSS
+                        <br>
+                        &#9702; JavaScript
+                        <br>
+                        &#9702; Adobe Photoshop
+                        <br>
+                        &#9702; Adobe Illustrator
+                        
+                    </div>
+                    
+                    <img src="data.png"style="width:11.3%; position: absolute; right: 17px; bottom: 17px; border: solid rgb(61,61,61) 4px; border-radius: 60px; padding: 5px;">
+
+                </div>
+            </div>
+            
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        
+
+
+        <br>
+        
+    
+        <p id="projects"></p>
+        <h1 class="projectstitle"style="font-size: 50px;">Projects
+        <span style="animation-name: cursor; 
+            animation-duration: 1.5s; 
+            animation-iteration-count: infinite;
+            animation-delay: 3s; 
+            margin-left: -15px;
+            color: transparent;">
+            &nbsp;&#9474;
+        </span>
+        </h1>
+
+        <div class="scroller" >
+            <div class="element light">
+                <img src="binaryclock.gif" class="gif">
+                <h1 id="project">Binary Clock</h1>
+                <div class="popup">
+                    Clock using a binary system to display the real-world time. 
+                    Hours, minutes, and seconds are shown as either on or off values.
+                    Made with C, Bash, and Git. 
+                    Project for CISC210 Introduction to Systems Programming.
+                </div>
+
+            </div>
+            
+            <div class="element light">
+                <img src="ezgif.com-gif-maker.gif" class="gif">
+                <h1 id="project">Snake Game</h1>
+                <div class="popup">A functioning snake game created with Python using Thonny IDE and designer library. Final project for CISC108 Introduction to Computer Science&nbsp;I.</div>
+
+            </div>
+
+            <div class="element light">
+                <img src="drizzle.gif" class="gif">
+                <h1 id="project">
+                    <a href="https://drizzle-lago.glitch.me"target="_blank">Drizzle</a>
+                </h1>
+                <div class="popup">Drizzle is my take on the popular online game Heardle. 
+                    Listen and identify the daily Drake song in as few tries as you can.
+                    It is a remix of an original project found on Glitch.
+                    I modified the CSS and JavaScript properties on the already coded foundation to make Heardle Drake themed.
+                    
+                </div>
+
+            </div>
+
+            <div class="element light">
+                <img src="dog.gif" class="gif">
+                <h1 id="project">
+                    Forest Escape
+                
+                </h1>
+                <div class="popup">A maze game where you attempt to help the dog reach the end. 
+                    This project helped my understanding of object oriented coding and its relation to classes/matrices.
+                    Made with C++.
+                    Project for CISC220 Data Structures.
+                </div>
+
+            </div>
+
+            <div class="element light">
+                <iframe src="website1.html" title="Portfolio Website" class="webframe"></iframe>
+                <h1 id="project">
+                    Portfolio Website
+                </h1>
+                <div class="popup">
+                    I created this website to learn more about frontend development.
+                    To build this project I taught myself HTML, CSS, and JavaScript.
+                </div>
+
+            </div>
+
+        </div>
+        
+        
+        
+        <footer>
+            Created 2022
+            
+            &#8226; Nicholas J. Lago &#8226;
+            <a style="color: white;"href="mailto:nicklago7@yahoo.com" title="Contact me via email" target="_blank">Contact</a>
+        </footer>
+        
+</body>
