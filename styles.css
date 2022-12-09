@@ -905,6 +905,8 @@ label {
     
 }
 
+/* Scollbar */
+
 ::-webkit-scrollbar {
     width: 0px;
 }
@@ -928,6 +930,8 @@ label {
     width: 10px;
     
 }
+
+/* Project Scroller */
 
 .scroller {
     padding-left: 100px;
@@ -971,6 +975,8 @@ label {
         grid-auto-columns: 74%;
     }
 }
+
+/* Drizzle Link Styles */
 
 .DrizzleLink {
     color: rgb(88, 70, 55)
